@@ -1,0 +1,55 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-console": "warn",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+"overrides": [
+  {
+    "files": ["*.js", "*.ts", "*.jsx", "*.tsx"],
+    "rules": {
+      "no-console": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-empty-function": "error"
+    }
+  },
+  {
+    "files": ["*.test.js", "*.test.ts", "*.test.jsx", "*.test.tsx"],
+    "rules": {
+      "no-console": "warn"
+    }
+  }
+]
+}
